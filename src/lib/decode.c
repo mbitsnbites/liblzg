@@ -132,7 +132,7 @@ unsigned int LZG_Decode(const unsigned char *in, lzg_uint32_t insize,
             return 0;
 
         /* Copy 1:1, input buffer to output buffer */
-        for (i = decodedSize - 1; i > 0; --i)
+        for (i = decodedSize; i > 0; --i)
             *dst++ = *src++;
 
         return decodedSize;
