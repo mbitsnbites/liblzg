@@ -36,6 +36,12 @@ or not.
 Version history
 ---------------
 
+v1.0.7 - 2013.10.22
+
+ - Fixed the one-byte-too-short copy in the decoder for random/uncompressible
+   data (not a problem for the lzgmini* implementations).
+
+
 v1.0.6 - 2011.03.29
 
  - Fixed a potential out-of-bounds bug in the C decoder.
