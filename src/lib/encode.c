@@ -408,7 +408,7 @@ lzg_uint32_t LZG_Encode(const unsigned char *in, lzg_uint32_t insize,
     const tune_params_t *params;
     lzg_uint32_t lengthEnc, length, offset = 0, symbolCost, i;
     int level, progress, oldProgress = -1;
-    char isMarkerSymbol, isMarkerSymbolLUT[255];
+    char isMarkerSymbol, isMarkerSymbolLUT[256];
 
     search_accel_t *sa = (search_accel_t*) 0;
     lzg_encoder_config_t defaultConfig;
