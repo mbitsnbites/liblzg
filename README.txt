@@ -1,4 +1,4 @@
-liblzg v1.0.6
+liblzg v1.0.8
 =============
 
 About
@@ -35,6 +35,11 @@ or not.
 
 Version history
 ---------------
+
+v1.0.8 - 2014.09.10
+
+ - Fixed a one-byte-too-short stack allocated array in the encoder.
+
 
 v1.0.7 - 2013.10.22
 
