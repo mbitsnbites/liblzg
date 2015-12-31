@@ -222,6 +222,14 @@ lzg_uint32_t LZG_MaxEncodedSize(lzg_uint32_t insize);
 void LZG_InitEncoderConfig(lzg_encoder_config_t *config);
 
 /**
+* Determine the amount of memory required for encoding
+* @param[in] config Compression configuration (if set to NULL, default encoder
+*            configuration parameters are used).
+* @retrun The size of the buffer required
+*/
+lzg_uint32_t LZG_WorkMemSize (lzg_encoder_config_t *config);
+
+/**
 * Encode uncompressed data using the LZG coder (i.e. compress the data).
 * @param[in]  in Input (uncompressed) buffer.
 * @param[in]  insize Size of the input buffer (number of bytes).
@@ -242,6 +250,29 @@ lzg_uint32_t LZG_Encode(const unsigned char *in, lzg_uint32_t insize,
                         unsigned char *out, lzg_uint32_t outsize,
                         lzg_encoder_config_t *config);
 
+/**
+* Encode uncompressed data using the LZG coder (i.e. compress the data).
+* @param[in]  in Input (uncompressed) buffer.
+* @param[in]  insize Size of the input buffer (number of bytes).
+* @param[out] out Output (compressed) buffer.
+* @param[in]  outsize Size of the output buffer (number of bytes).
+* @param[in]  config Compression configuration (if set to NULL, default encoder
+*             configuration parameters are used).
+* @param[in]  workmem Buffer to be used for compression, or NULL.  See
+*             @ref LZG_WorkMemSize.
+* @return The size of the encoded data, or zero if the function failed
+*         (e.g. if the end of the output buffer was reached before the
+*         entire input buffer was encoded).
+* @note For the slow method (config->fast = 0), the memory requirement during
+* compression is 136 KB (LZG_LEVEL_1) to 2 MB (LZG_LEVEL_9). For the fast
+* method (config->fast = 1), the memory requirement is 64 MB (LZG_LEVEL_1) to
+* 66 MB (LZG_LEVEL_9). Also note that these figures are doubled on 64-bit
+* systems.
+*/
+lzg_uint32_t LZG_EncodeFull(const unsigned char *in, lzg_uint32_t insize,
+                            unsigned char *out, lzg_uint32_t outsize,
+                            lzg_encoder_config_t *config,
+                            void* workmem);
 
 /**
 * Determine the size of the decoded data for a given LZG coded buffer.
