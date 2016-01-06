@@ -56,6 +56,10 @@ extern "C" {
 *                            a given uncompressed buffer (worst case).
 * @li LZG_InitEncoderConfig() - Set default encoder configuration.
 * @li LZG_Encode() - Encode uncompressed data as LZG coded data.
+* @li LZG_EncodeFull() - Same as LZG_Encode(), but using custom memory
+*                        allocation.
+* @li LZG_WorkMemSize() - Determine the amount of memory required for encoding
+*                         (useful for LZG_EncodeFull()).
 *
 * @li LZG_DecodedSize() - Determine the size of the decoded data for a given
 *                         LZG coded buffer.
