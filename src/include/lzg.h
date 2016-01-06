@@ -3,7 +3,7 @@
 /*
 * This file is part of liblzg.
 *
-* Copyright (c) 2010-2014 Marcus Geelnard
+* Copyright (c) 2010-2015 Marcus Geelnard
 *
 * This software is provided 'as-is', without any express or implied
 * warranty. In no event will the authors be held liable for any damages
@@ -32,12 +32,12 @@
 extern "C" {
 #endif
 
-#define LZG_VERSION "1.0.8"    /**< @brief LZG library version string */
-#define LZG_VERNUM  0x01000008 /**< @brief LZG library version number (strictly
+#define LZG_VERSION "1.0.9"    /**< @brief LZG library version string */
+#define LZG_VERNUM  0x01000009 /**< @brief LZG library version number (strictly
                                     incremental) */
 #define LZG_VER_MAJOR    1     /**< @brief LZG library major version */
 #define LZG_VER_MINOR    0     /**< @brief LZG library minor version */
-#define LZG_VER_REVISION 8     /**< @brief LZG library revision */
+#define LZG_VER_REVISION 9     /**< @brief LZG library revision */
 
 /**
 * @file

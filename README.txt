@@ -1,4 +1,4 @@
-liblzg v1.0.8
+liblzg v1.0.9
 =============
 
 About
@@ -35,6 +35,12 @@ or not.
 
 Version history
 ---------------
+
+v1.0.9 - 2016.01.06
+
+ - Added optional LZG_EncodeFull() function for allowing users to use custom
+   memory allocation instead of malloc/free [Evan Nemerson].
+
 
 v1.0.8 - 2014.09.10
 
