@@ -230,7 +230,7 @@ static void _LZG_SearchAccel_Init(search_accel_t* self,
     self->tab = (unsigned char**) (((hist_rec*) workingMemory) + 256);
     memset(self->tab, 0, params->window * sizeof(unsigned char**));
     self->last = self->tab + params->window;
-    memset(self->tab, 0, (fast ? 16777216 : 65536) * sizeof(unsigned char *));
+    memset(self->last, 0, (fast ? 16777216 : 65536) * sizeof(unsigned char *));
 
     /* Init parameters */
     self->params = *params;
