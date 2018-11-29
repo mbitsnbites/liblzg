@@ -3,7 +3,7 @@
 /*
 * This file is part of liblzg.
 *
-* Copyright (c) 2010-2015 Marcus Geelnard
+* Copyright (c) 2010-2018 Marcus Geelnard
 *
 * This software is provided 'as-is', without any express or implied
 * warranty. In no event will the authors be held liable for any damages

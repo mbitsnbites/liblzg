@@ -1,5 +1,5 @@
-liblzg v1.0.9
-=============
+liblzg v1.0.10
+==============
 
 About
 -----
@@ -35,6 +35,11 @@ or not.
 
 Version history
 ---------------
+
+v1.0.10 - 2018.11.29
+
+ - Fixed an incorrect memzero in the encoder [Jørgen Ibsen].
+
 
 v1.0.9 - 2016.01.06
 
