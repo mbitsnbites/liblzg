@@ -1,3 +1,5 @@
+⚠️ This repository has moved to: https://gitlab.com/mbitsnbites/liblzg
+
 liblzg v1.0.10
 ==============
 
